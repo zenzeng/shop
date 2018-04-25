@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册-<%=title%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.1/css/weui.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    -->
+    <link rel="stylesheet" href="/lib/jqweui/lib/weui.css">
+    <link rel="stylesheet" href="/lib/jqweui/css/jquery-weui.css">
+
+</head>
+<body>
+
+
+<div class="weui-cells__title">表单</div>
+<form action="/users/doregister" id="formid" method="post">
+<div class="weui-cells weui-cells_form">
+
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">账号</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" id='username' name='username' placeholder="请输入账号">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">邮箱</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="email" id='email' name='email' placeholder="请输入邮箱">
+        </div>
+    </div>
+    <div class="weui-cell weui-cell_vcode">
+        <div class="weui-cell__hd">
+            <label class="weui-label">手机号</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="tel"  id='mobile' name='mobile' placeholder="请输入手机号">
+        </div>
+        <div class="weui-cell__ft">
+            <button class="weui-vcode-btn">获取验证码</button>
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">验证码</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="number"  id='mcapcode' name='mcapcode' placeholder="请输入验证码">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="number"  id='password' name='password' pattern="[0-9]*" placeholder="请输入密码">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">确认密码</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="number"  id='conpassword' name='conpassword' pattern="[0-9]*" placeholder="请输入确认密码">
+        </div>
+    </div>
+
+</div>
+
+<div class="weui-cells weui-cells_form">
+
+    <div class="weui-cell weui-cell_vcode">
+        <div class="weui-cell__hd"><label class="weui-label">验证码</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="number"  id='capcode' name='capcode' placeholder="请输入验证码">
+        </div>
+        <div class="weui-cell__ft">
+            <img class="weui-vcode-img" id="captchaImg" src="/captcha">
+        </div>
+    </div>
+
+</div>
+
+
+<label for="weuiAgree" class="weui-agree">
+    <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
+    <span class="weui-agree__text">
+        阅读并同意<a href="javascript:void(0);">《相关条款》</a>
+      </span>
+</label>
+
+
+<div class="weui-btn-area ">
+    <a id="showTooltips" class="weui-btn weui-btn_primary">注册</a>
+</div>
+
+</form>
+
+<div class="weui-cells__tips">底部说明文字底部说明文字</div>
+
+<!-- body 最后 -->
+<!--
+<script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+-->
+
+<script src="/lib/jqweui/lib/jquery-2.1.4.js"></script>
+<script src="/lib/jqweui/js/jquery-weui.js"></script>
+
+<script src="/lib/jqweui/lib/fastclick.js"></script>
+<script type="text/javascript">
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+<script>
+    $('#captchaImg').click(function () {
+        $(this).attr('src', '/captcha?'+Date.now());
+    });
+
+    $("#showTooltips").click(function() {
+        var tel = $('#tel').val();
+        var code = $('#code').val();
+        //if(!tel || !/1[3|4|5|7|8]\d{9}/.test(tel)) $.toptip('请输入手机号');
+        //else if(!code || !/\d{6}/.test(code)) $.toptip('请输入六位手机验证码');
+        //else $.toptip('提交成功', 'success');
+        $('#formid').submit();
+        /*$.ajax({
+            type : 'POST',
+            data : $("#formid").serialize(),
+            dateType : 'json',
+            url : '/users/doregister',
+            success : function (data) {
+                console.log(data);
+                $.toptip('注册成功', 'success');
+            }
+        });*/
+
+    });
+</script>
+</body>
+</html>

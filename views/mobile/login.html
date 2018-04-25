@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录-<%=title%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.1/css/weui.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    -->
+    <link rel="stylesheet" href="/lib/jqweui/lib/weui.css">
+    <link rel="stylesheet" href="/lib/jqweui/css/jquery-weui.css">
+
+</head>
+<body>
+
+
+<div class="weui-cells__title">登录</div>
+<form action="/users/dologin" id="formid" method="post">
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell weui-cell_warn">
+        <div class="weui-cell__hd"><label for="" class="weui-label">账号</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" id='username' name='username' value=""  placeholder="请输入账号">
+        </div>
+        <div class="weui-cell__ft">
+            <i class="weui-icon-warn"></i>
+        </div>
+    </div>
+
+    <div class="weui-cell weui-cell_warn">
+        <div class="weui-cell__hd"><label for="" class="weui-label">密码</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" id='password' name='password' placeholder="请输入密码">
+        </div>
+        <div class="weui-cell__ft">
+            <i class="weui-icon-warn"></i>
+        </div>
+    </div>
+
+</div>
+
+<div class="weui-btn-area ">
+    <a href="javascript:$('#formid').submit();" class="weui-btn weui-btn_primary">登录</a>
+    <a href="/users/register" class="weui-btn weui-btn_default">注册</a>
+</div>
+</form>
+
+<!-- body 最后 -->
+<!--
+<script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+-->
+
+<script src="/lib/jqweui/lib/jquery-2.1.4.js"></script>
+<script src="/lib/jqweui/js/jquery-weui.js"></script>
+
+<script src="/lib/jqweui/lib/fastclick.js"></script>
+<script type="text/javascript">
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+</body>
+</html>

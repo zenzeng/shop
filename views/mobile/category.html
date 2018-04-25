@@ -1,0 +1,160 @@
+<% include public/weui_header.html %>
+
+<div class="weui-search-bar" id="searchBar">
+    <form class="weui-search-bar__form">
+        <div class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+            <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+        </div>
+        <label class="weui-search-bar__label" id="searchText">
+            <i class="weui-icon-search"></i>
+            <span>搜索</span>
+        </label>
+    </form>
+    <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+</div>
+
+
+<div class="weui-flex">
+    <div class="weui-flex-item">
+        <div class="placeholder">
+            <div class="weui-cells mt0 br">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p><a class="parentCat colorred" href="#" id="parentCat1" index="childCat11">一级分类1</a></p>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p><a class="parentCat" href="#" id="parentCat2" index="childCat12">一级分类2</a></p>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p><a class="parentCat" href="#" id="parentCat3" index="childCat3">一级分类3</a></p>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p><a class="parentCat" href="#" id="parentCat4" index="childCat4">一级分类4</a></p>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p><a class="parentCat" href="#" id="parentCat5" index="childCat5">一级分类5</a></p>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p><a class="parentCat" href="#" id="parentCat6" index="childCat6">一级分类6</a></p>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p><a class="parentCat" href="#" id="parentCat7" index="childCat7">一级分类7</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="weui-flex-item ml10">
+        <div class="placeholder">
+
+            <div class="weui-grids childcat show" id="childCat11">
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="/images/1.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        Button
+                    </p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="/images/2.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        List
+                    </p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="/images/1.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        Button
+                    </p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="/images/2.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        List
+                    </p>
+                </a>
+            </div>
+
+
+            <div class="weui-grids childcat hide" id="childCat12">
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="/images/3.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        Button2
+                    </p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="/images/4.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        List2
+                    </p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="/images/5.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        Button2
+                    </p>
+                </a>
+                <a href="" class="weui-grid js_grid">
+                    <div class="weui-grid__icon">
+                        <img src="/images/6.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        List2
+                    </p>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<% include public/weui_footer.html %>
+
+<script type="text/javascript">
+    $(function () {
+
+        $('.parentCat').on('click', function () {
+            var childobj = $(this).attr('index');
+
+            $('.parentCat').removeClass('colorred');
+            $(this).addClass('colorred');
+
+            $('.childcat').addClass('hide');
+            $('#'+childobj).removeClass('hide');
+
+        });
+    });
+
+</script>

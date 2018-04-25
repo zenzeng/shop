@@ -1,0 +1,135 @@
+<% include public/weui_header.html %>
+
+<div class="weui-cells__title mt20">我的基本信息，要填一些好玩的</div>
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">昵称</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入昵称">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="" class="weui-label">出生日期</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" value="" id="mydate" placeholder="请选择出生日期">
+        </div>
+    </div>
+</div>
+<div class="weui-cells__tips">底部说明文字底部说明文字</div>
+
+
+<div class="weui-cells__title">通用的开关设置，用于全局控制</div>
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">自动登录</div>
+        <div class="weui-cell__ft">
+            <input class="weui-switch" type="checkbox">
+        </div>
+    </div>
+    <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">显示昵称</div>
+        <div class="weui-cell__ft">
+            <label for="switchCP" class="weui-switch-cp">
+                <input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+                <div class="weui-switch-cp__box"></div>
+            </label>
+        </div>
+    </div>
+    <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">显示手机号</div>
+        <div class="weui-cell__ft">
+            <label for="switchCP" class="weui-switch-cp">
+                <input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+                <div class="weui-switch-cp__box"></div>
+            </label>
+        </div>
+    </div>
+</div>
+
+
+<div class="weui-cells__title">个人简介</div>
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+        <div class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="请输入个人简介" rows="3"></textarea>
+            <div class="weui-textarea-counter"><span>0</span>/200</div>
+        </div>
+    </div>
+</div>
+
+<div class="weui-cells__title">我的个人标签，用于找啊找啊找朋友</div>
+<div class="weui-cells weui-cells_checkbox">
+    <label class="weui-cell weui-check__label" for="s11">
+        <div class="weui-cell__hd">
+            <input type="checkbox" class="weui-check" name="checkbox1" id="s11" checked="checked">
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>我是个吃货</p>
+        </div>
+    </label>
+    <label class="weui-cell weui-check__label" for="s12">
+        <div class="weui-cell__hd">
+            <input type="checkbox" name="checkbox1" class="weui-check" id="s12">
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>你是个逗比</p>
+        </div>
+    </label>
+    <label class="weui-cell weui-check__label" for="s13">
+        <div class="weui-cell__hd">
+            <input type="checkbox" name="checkbox1" class="weui-check" id="s13">
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>拯救世界的程序员</p>
+        </div>
+    </label>
+    <label class="weui-cell weui-check__label" for="s14">
+        <div class="weui-cell__hd">
+            <input type="checkbox" name="checkbox1" class="weui-check" id="s14">
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>找个程序员鼓励师</p>
+        </div>
+    </label>
+    <label class="weui-cell weui-check__label" for="s15">
+        <div class="weui-cell__hd">
+            <input type="checkbox" name="checkbox1" class="weui-check" id="s15">
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>杀个程序员祭天</p>
+        </div>
+    </label>
+    <label class="weui-cell weui-check__label" for="s16">
+        <div class="weui-cell__hd">
+            <input type="checkbox" name="checkbox1" class="weui-check" id="s16">
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>干个产品经理祭地</p>
+        </div>
+    </label>
+</div>
+
+<div class="weui-btn-area ">
+    <a href="javascript:;" id="showTooltips" class="weui-btn weui-btn_primary">保存</a>
+</div>
+
+
+<% include public/weui_footer.html %>
+
+<script type="text/javascript">
+    $("#mydate").calendar();
+</script>
+
+<!--
+<script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/swiper.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/city-picker.min.js"></script>
+-->
+<script src="/lib/jqweui/js/swiper.js"></script>
+<script src="/lib/jqweui/js/city-picker.js"></script>
+

@@ -1,0 +1,51 @@
+<% include public/weui_header.html %>
+
+<link rel="stylesheet" href="/css/m/user.css">
+
+<div class="head-img">
+
+    <div class="my-id-bg">
+        <img src="/images/ctop.jpg"/>
+    </div>
+
+    <div class="my-top">
+        <div class="my-id-pic">
+            <img id="my-pic" src="/images/noavatar_middle.gif"/>
+        </div>
+        <div class="my-id-desc">
+            <div class="frem08">我的名字</div>
+            <div class="frem06">我的等级</div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="weui-cells">
+
+    <a class="weui-cell weui-cell_access" href="/order/myorder">
+        <div class="weui-cell__hd"><i class="iconfont icon-fenlei f20 mr10"></i></div>
+        <div class="weui-cell__bd">
+            <p>全部订单</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+    </a>
+</div>
+
+<div class="weui-cells">
+
+    <a class="weui-cell weui-cell_access" href="/users/account">
+        <div class="weui-cell__hd"><i class="iconfont icon-xinxi1 f20 mr10"></i></div>
+        <div class="weui-cell__bd">
+            <p>账户管理</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+    </a>
+</div>
+
+<div class="weui-btn-area ">
+    <a href="/users/logout" id="showTooltips" class="weui-btn weui-btn_warn">退出</a>
+</div>
+
+
+<% include public/weui_footer.html %>
